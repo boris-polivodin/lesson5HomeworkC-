@@ -26,11 +26,10 @@ class Program {
   }
     
   static void FillArray(double[] arr, int down, int up) {
-      int dif = up - down;
       Random rand = new Random();
       for (int i = 0; i < arr.Length; i++)
       {
-         arr[i] = Math.Round(rand.NextDouble() * ++dif + down, 2);
+         arr[i] = Math.Round(rand.NextDouble() * (up - down) + down, 2);
       }
   }
 
